@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <div class="container"> -->
+        <div class="container navbarFont">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="nav navbar-nav navbar-center" style="gap:2rem">
+
+                <ng-container *ngFor="let menu of arrNavbar">
+                    <ng-container *ngIf="menu.submenu.length>0; else plainmenu">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{menu.name}}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li *ngFor="let submenu of menu.submenu">
+                                <a class="dropdown-item" href="{{submenu.route}}">{{submenu.name}}</a>
+                            </li>
+                            <!-- <li><a class="dropdown-item" ng-href="#">Another action</a></li>
+                            <li><a class="dropdown-item" ng-href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>                     
+                    </ng-container>
+                    <ng-template #plainmenu>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{menu.route}}">{{menu.name}}</a>
+                        </li>
+                    </ng-template>
+                </ng-container>            
+            </ul>
+        </div>
+        </div>
+    <!-- </div> -->
+  </nav>

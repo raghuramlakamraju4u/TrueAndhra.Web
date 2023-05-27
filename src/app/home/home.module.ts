@@ -13,6 +13,7 @@ import { MainRowBComponent } from './components/main-row-b/main-row-b.component'
 import { MainRowCComponent } from './components/main-row-c/main-row-c.component';
 import { FormsModule } from '@angular/forms';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     MainComponent,
     HomeComponent,
+    NavbarComponent,
     MainRowAComponent,
     MainRowBComponent,
     MainRowCComponent
