@@ -1,0 +1,27 @@
+
+.header_container {
+    background-color: #fff;
+    padding-bottom: 26px;
+}
+
+.header {
+    text-align: center;
+    padding-top: 7px;
+
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & .main_title a {
+        color: #ED1C24;
+        font-size: 96px;
+        text-decoration: none;
+    }
+
+    & .secondary_title {
+        color: #7C7C7C;
+        line-height: 1;
+        margin-top: 3px;
+        font-size: 14px;
+    }
+}

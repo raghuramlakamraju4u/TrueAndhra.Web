@@ -1,1 +1,149 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+a,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+dfn,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+.clearfix:after
+{
+    font-size: 0px;
+    content: ".";
+    display: block;
+    height: 0px;
+    visibility: hidden;
+    clear: both;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    // display: flex;
+    // flex-direction: column;
+}
+
+
+body {
+    // background: #F0F0F0;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Arial';
+    font-size: 14px;
+    color: #FFF;
+
+    min-height: 100vh;
+}
+
+.header h1 a,
+.sf-menu a:hover,
+.social_icons .social_icon:hover,
+.more:hover,
+.read_more:hover,
+.tabs_navigation li a:hover,
+.tabs_navigation li a:focus,
+.tabs_navigation li a:active,
+.post .comments_number:hover,
+.taxonomies a:hover,
+.pagination li a:hover,
+.slider_content_box li.category a:hover,
+.gallery_close:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    padding: 1em 0;
+    color: #3E3E3E;
+    line-height: 150%;
+}
+
+p.text {
+    font-size: 16px;
+}
+
+p a {
+    color: #ED1C24;
+}
+
+strong {
+    color: #000;
+}
+
+label
+{
+	color: #25282A;
+	font-family: 'Roboto';
+}
+
+.responsive
+{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+input, textarea
+{
+	font-family: arial;
+	background: #F0F0F0;
+	border: none;
+	font-size: 14px;
+	padding: 15px 20px;
+	color: #3E3E3E;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

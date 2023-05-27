@@ -1,0 +1,15 @@
+
+.home_container {
+    height: 100%;
+    display: grid;
+
+    grid-template-rows: 220px auto 80px;
+
+    & .main {
+        height: 100%;
+    }
+
+    & .footer {
+        background-color: black;
+    }
+}
