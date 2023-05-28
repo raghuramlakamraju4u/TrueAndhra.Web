@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'news/details/:id',
-    loadChildren: () => import('./shared/shared/shared.module').then((m) => m.SharedModule) 
+    loadChildren: () => import('./shared/shared.module').then((m) => m.SharedModule) 
   }
 ];
 

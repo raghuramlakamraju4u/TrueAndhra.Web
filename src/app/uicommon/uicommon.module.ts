@@ -12,6 +12,10 @@ import { AuthorItemComponent } from './components/author-item/author-item.compon
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    PostItemComponent,
+    AuthorItemComponent
   ]
 })
 export class UicommonModule { }

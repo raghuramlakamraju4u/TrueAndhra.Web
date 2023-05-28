@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedRoutingModule } from './shared-routing.module';
 import { NewsDetailsComponent } from './components/news-details/news-details.component';
 import { AuthorDetailsComponent } from './components/author-details/author-details.component';
-import { SharedRoutingModule } from '../shared-routing.module';
+import { UicommonModule } from '../uicommon/uicommon.module';
 
 
 
@@ -13,7 +14,9 @@ import { SharedRoutingModule } from '../shared-routing.module';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+
+    UicommonModule
   ],
   exports: [
     NewsDetailsComponent,
