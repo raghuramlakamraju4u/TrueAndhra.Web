@@ -1,20 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PostConfig } from '../../models/post-config';
 
-interface PostConfig {
-  sImg: string;
-  STitle: string;
-  sDesc: string;
-  sCat: string;
-  oDate: Date;
 
-  arrBullets?: string[];
-
-  bIsXsSize?: boolean;
-  bIsXlSize?: boolean;
-
-  bInMRCList?: boolean;
-  bIsFirstItemInMRCList?: boolean;
-}
 
 @Component({
   selector: 'app-post-item',
@@ -23,11 +10,35 @@ interface PostConfig {
 })
 export class PostItemComponent implements OnInit {
 
-  @Input() oPostConfig: PostConfig;
+  @Input() oPostConfig: PostConfig | any = {};
+
+  public oImgDim = {height: '', width: ''};
 
   constructor() { }
 
   ngOnInit(): void {
+    this.fnComputeImgDim();
+  }
+
+  private fnComputeImgDim(): void {
+    switch(this.oPostConfig.nImgSize) {
+      case 0: {
+        this.oImgDim = {height: 'auto', width: '100px'};
+        break;
+      }
+      case 1: {
+        this.oImgDim = {height: 'auto', width: '210px'};
+        break;
+      }
+      case 2: {
+        this.oImgDim = {height: '120px', width: '310px'};
+        break;
+      }
+      case 3: {
+        this.oImgDim = {height: '240px', width: '330px'};
+        break;
+      }
+    }
   }
 
 }

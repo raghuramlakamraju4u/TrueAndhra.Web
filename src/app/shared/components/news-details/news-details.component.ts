@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostConfig } from 'src/app/uicommon/models/post-config';
 
 @Component({
   selector: 'app-news-details',
@@ -8,6 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class NewsDetailsComponent implements OnInit {
 
   constructor() { }
+
+  public oFakePostItem: PostConfig = {
+    sImg: 'https://quanticalabs.com/wp_themes/pressroom/files/2015/01/image_031-510x374.jpg',
+    STitle: 'North Sea oil industry faces dire future',
+    sDesc: 'Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.',
+    sCat: 'HEALTH',
+    oDate: new Date(),
+    nImgSize: 1,
+    bShowBullets: true,
+    arrBullets: [
+      'Free episodes and new movies on iTunes',
+      'Getting started with mobile games',
+      'The world’s tiniest drone put to the test',
+      'Our favorites from the Geneva Motor Show'
+    ]
+  }
 
   ngOnInit(): void {
   }
