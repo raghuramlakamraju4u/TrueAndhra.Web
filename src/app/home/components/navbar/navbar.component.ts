@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
     {
       name: "Home" ,
       route: '/home',
+      isActive: false,
       submenu: [
         {
           name: 'home1',
@@ -26,6 +27,7 @@ export class NavbarComponent implements OnInit {
     {
       name: "Pages" ,
       route: '/Pages',
+      isActive: false,
       submenu: [
         {
           name: 'Page1',
@@ -41,6 +43,7 @@ export class NavbarComponent implements OnInit {
     {
       name: "Mega menu" ,
       route: '/megamenu',
+      isActive: false,
       submenu: [
         {
           name: 'Mega1',
@@ -56,6 +59,7 @@ export class NavbarComponent implements OnInit {
     {
       name: "Authors" ,
       route: '/authors',
+      isActive: false,
       submenu: [
         {
           name: 'Author1',
@@ -71,6 +75,7 @@ export class NavbarComponent implements OnInit {
     {
       name: "Categories" ,
       route: '/categories',
+      isActive: false,
       submenu: [
         {
           name: 'Category1',
@@ -88,5 +93,26 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  public onMenuClick(menu){
+    if(!menu) return;
+
+    menu.isActive = true;
+
+  }
+
+  public onMouseHover(event, Target1: HTMLElement, Target2: HTMLElement){
+    Target1.classList.add('show');
+    Target2.classList.add('show');
+
+  }
+
+  public onMouseLeave(event, Target1: HTMLElement, Target2: HTMLElement){
+    Target1.classList.remove('show');
+    Target2.classList.remove('show');
+
+  }
+
+  
 
 }

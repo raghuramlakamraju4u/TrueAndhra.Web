@@ -10,12 +10,12 @@
 
                 <ng-container *ngFor="let menu of arrNavbar">
                     <ng-container *ngIf="menu.submenu.length>0; else plainmenu">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item dropdown" (mouseleave)="onMouseLeave($event, Target1, Target2)" (mouseover)="onMouseHover($event, Target1, Target2)" [ngClass]="{'active': menu.isActive}">
+                            <a #Target1 class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{menu.name}}
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li *ngFor="let submenu of menu.submenu">
+                            <ul #Target2 class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li *ngFor="let submenu of menu.submenu" (click)="onMenuClick(menu)">
                                 <a class="dropdown-item" href="{{submenu.route}}">{{submenu.name}}</a>
                             </li>
                             <!-- <li><a class="dropdown-item" ng-href="#">Another action</a></li>
