@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/components/home/home.component';
+import { MainComponent } from './home/components/main/main.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: MainComponent
+  },
+  {
+    path: 'news/details/:id',
+    loadChildren: () => import('./shared/shared/shared.module').then((m) => m.SharedModule) 
   }
 ];
 

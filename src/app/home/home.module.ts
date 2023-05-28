@@ -41,6 +41,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     TopBarComponent,
     HeaderComponent,
     PremAdsComponent,
+    NavbarComponent,
     FooterComponent,
     MainComponent,
     HomeComponent

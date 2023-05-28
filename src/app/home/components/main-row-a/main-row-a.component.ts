@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -16,7 +17,7 @@ export class MainRowAComponent implements OnInit {
 
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
 
-  constructor() { }
+  constructor(private oRouter: Router) { }
 
   ngOnInit(): void {
   }
@@ -41,6 +42,10 @@ export class MainRowAComponent implements OnInit {
 		if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
 			this.togglePaused();
 		}
+	}
+
+	public fnCarouselItemClick(): void {
+		this.oRouter.navigate(['news/details', 1]);
 	}
 
 }

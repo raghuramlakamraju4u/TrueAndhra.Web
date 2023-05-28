@@ -1,10 +1,10 @@
 <div class="row " style="margin-top: 40px;">
     <div class="col-12 col-sm-8">
 
-        <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="true" [pauseOnFocus]="true"
+        <ngb-carousel #carousel [interval]="2500" [pauseOnHover]="true" [pauseOnFocus]="true"
             (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let img of images; index as i">
-                <div class="carousel-caption">
+                <div class="carousel-caption" (click)="fnCarouselItemClick()">
                     <h3>My slide {{i + 1}} title</h3>
                 </div>
                 <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
