@@ -1,11 +1,11 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewInit {
 
   public arrNavbar = [
     {
@@ -88,11 +88,28 @@ export class NavbarComponent implements OnInit {
 
       ]
     }
-  ]
+  ];
+
+  public bForceSticky: boolean = false;
+
+  @ViewChild('menubar') oMenubarElemRef: ElementRef;
+
+  private menuPosition: any;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  ngAfterViewInit(): void {
+    this.menuPosition = this.oMenubarElemRef.nativeElement.offsetTop;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+    fnWindowScrollHandler() {
+      const windowScroll = window.pageYOffset;
+      this.bForceSticky = windowScroll -160 >= this.menuPosition ? true : false;
+    }
 
   public onMenuClick(menu){
     if(!menu) return;
