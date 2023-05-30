@@ -1,26 +1,32 @@
-<div class="post_container">
+<div class="post_container" [class.align_horizontal]="oPostConfig.bAlignHorizontal">
     <!-- Image -->
     <div class="img_container" >
         <img [ngStyle]="{'height': oImgDim.height, 'width': oImgDim.width}" src="{{oPostConfig.sImg}}">
     </div>
-    <!-- Title -->
-    <h5 class="clearfix title_wrapper" >
-        <a class="title_anchor" href="">{{oPostConfig.STitle}}</a>
-    </h5>
 
-    <div class="flex_container">
-        <a class="cat_anchor" href="">{{oPostConfig.sCat}}</a>
-        <div class="date">{{oPostConfig.oDate | date: 'mediumDate'}}</div>
+    <div>
+        <!-- Title -->
+        <h5 class="clearfix title_wrapper">
+            <a class="title_anchor" href="">{{oPostConfig.STitle}}</a>
+        </h5>
+    
+        <div class="flex_container">
+            <a class="cat_anchor" href="">{{oPostConfig.sCat}}</a>
+            <div class="date">{{oPostConfig.oDate | date: 'mediumDate'}}</div>
+        </div>
+    
+        <div *ngIf="oPostConfig.bShowDesc" class="description_wrapper">
+            {{oPostConfig.sDesc}}
+        </div>
+    
+        <ul *ngIf="oPostConfig.bShowBullets" class="bullet_ul">
+            <li class="bullet_li" *ngFor="let item of oPostConfig.arrBullets">
+                {{item}}
+            </li>
+        </ul>
+    
     </div>
 
-    <div *ngIf="oPostConfig.bShowDesc" class="description_wrapper">
-        {{oPostConfig.sDesc}}
-    </div>
-
-    <ul *ngIf="oPostConfig.bShowBullets" class="bullet_ul">
-        <li class="bullet_li" *ngFor="let item of oPostConfig.arrBullets">
-            {{item}}
-        </li>
-    </ul>
+    
 
 </div>

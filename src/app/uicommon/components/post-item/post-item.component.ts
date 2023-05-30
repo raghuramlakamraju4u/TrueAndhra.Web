@@ -22,19 +22,19 @@ export class PostItemComponent implements OnInit {
 
   private fnComputeImgDim(): void {
     switch(this.oPostConfig.nImgSize) {
-      case 0: {
-        this.oImgDim = {height: 'auto', width: '100px'};
+      case 0: { //small
+        this.oImgDim = {height: '100px', width: '100px'};
         break;
       }
-      case 1: {
+      case 1: { //medium
         this.oImgDim = {height: 'auto', width: '210px'};
         break;
       }
-      case 2: {
+      case 2: { //strech
         this.oImgDim = {height: '120px', width: '310px'};
         break;
       }
-      case 3: {
+      case 3: { //large
         this.oImgDim = {height: '240px', width: '330px'};
         break;
       }

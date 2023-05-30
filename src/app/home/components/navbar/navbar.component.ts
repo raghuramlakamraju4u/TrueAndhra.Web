@@ -108,7 +108,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   @HostListener('window:scroll', ['$event'])
     fnWindowScrollHandler() {
       const windowScroll = window.pageYOffset;
-      this.bForceSticky = windowScroll -160 >= this.menuPosition ? true : false;
+      this.bForceSticky = windowScroll - 100>= this.menuPosition ? true : false;
     }
 
   public onMenuClick(menu){

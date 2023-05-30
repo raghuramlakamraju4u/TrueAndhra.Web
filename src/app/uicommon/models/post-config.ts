@@ -15,4 +15,6 @@ export interface PostConfig {
     bIsFirstItemInMRCList?: boolean;
     bShowDesc?: boolean;
     bShowBullets?: boolean;
+
+    bAlignHorizontal?: boolean;
   }
