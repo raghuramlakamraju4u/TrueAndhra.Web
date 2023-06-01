@@ -15,6 +15,27 @@
     top: -2px; // Just to overlap with grey border
 }
 
+.submenuStyles{
+    background-color: #42494F;
+    border-radius: 0 !important;
+    //color: #FFF;
+
+    & li{
+        padding: 5px 0;
+    }
+    
+    & a {
+        color: #FFF;
+        font-size: 19px;
+    }
+
+    & :hover {
+        background-color: #596269;
+    }
+
+}
+
+
 .active, .hoverStyles:hover{
     border-top: 3px solid #ED1C24 !important;
     background-color: #F0F0F0;
