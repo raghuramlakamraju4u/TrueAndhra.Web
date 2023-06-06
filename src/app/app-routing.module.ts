@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './home/components/main/main.component';
+import { EditorComponent } from './home/components/editor/editor.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'news/details/:id',
     loadChildren: () => import('./shared/shared.module').then((m) => m.SharedModule) 
+  },
+  {
+    path: 'editor',
+    component: EditorComponent
   }
 ];
 
