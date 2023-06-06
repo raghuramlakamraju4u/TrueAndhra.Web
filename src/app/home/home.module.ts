@@ -14,6 +14,9 @@ import { MainRowCComponent } from './components/main-row-c/main-row-c.component'
 import { FormsModule } from '@angular/forms';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditorComponent } from './components/editor/editor.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,11 +30,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NavbarComponent,
     MainRowAComponent,
     MainRowBComponent,
-    MainRowCComponent
+    MainRowCComponent,
+    EditorComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    HttpClientModule,
+    AngularEditorModule,
 
     FormsModule,
     NgbCarouselModule,
