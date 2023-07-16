@@ -1,7 +1,50 @@
-<app-post-item class="m-5" [oPostConfig]="oFakePostItem_Small"></app-post-item>
+<div class="newsDetailsContainer">
+    <div class="title">{{oPost.strTitle}}</div>
+    <!-- Post header meta data -->
+    <ul class="postHeaderMetaContainer clearfix">
+        <!-- Category -->
+        <li class="headerMeta">
+            <i class="bi bi-collection-fill icon"></i>
+            <a class="link">{{oPost.strCategory}}</a>
+        </li>
+        <!-- Timestamp -->
+        <li class="headerMeta">
+            <i class="bi bi-calendar3-event-fill icon"></i>
+            <span class="category">{{oPost.strDateTime}}</span>
+        </li>
+        <!-- Author -->
+        <li class="headerMeta">
+            <i class="bi bi-pen-fill icon"></i>
+            <a class="link">{{oPost.strAuthor}}</a>
+        </li>
+        <!-- Views -->
+        <li class="headerMeta">
+            <i class="bi bi-eye-fill icon"></i>
+            <span>{{oPost.nViews}}</span>
+        </li>
+        <!-- Comments -->
+        <li class="headerMeta">
+            <i class="bi bi-chat-dots-fill icon"></i>
+            <a class="link">{{oPost.nComments}}</a>
+        </li>
+    </ul>
+    <div class="contentContainer">
+        <div class="topImage">
+            <img src="{{oPostDetails.arrMedia[0].src}}">
+            <div class="label">
+                <span class="lableText">{{oPostDetails.arrMedia[0].oLabel.text}}</span>
+                <span class="src">{{oPostDetails.arrMedia[0].oLabel.src}}</span>
+            </div>
+        </div>
 
-<app-post-item class="m-5" [oPostConfig]="oFakePostItem_Medium"></app-post-item>
-
-<app-post-item class="m-5" [oPostConfig]="oFakePostItem_Streched"></app-post-item>
-
-<app-post-item class="m-5" [oPostConfig]="oFakePostItem_Large"></app-post-item>
+        <div class="mainContentContainer clearfix">
+            
+            <div class="authorContainer">
+                <div>Author info goes here ....</div>
+            </div>
+            <div class="postContent">
+                {{oPostDetails.oContent.text}}
+            </div>
+        </div>
+    </div>
+</div>

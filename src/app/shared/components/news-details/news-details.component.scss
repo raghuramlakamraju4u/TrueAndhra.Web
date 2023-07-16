@@ -1,0 +1,96 @@
+
+.newsDetailsContainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    & .title {
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+    & .postHeaderMetaContainer {
+        clear: both;
+        float: none;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #E9E9E9;
+
+        & .headerMeta {
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            list-style: none;
+
+            padding: 0 0 0 20px;
+            margin-right: 20px;
+            margin-bottom: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #7C7C7C;
+
+            & .icon {
+                margin-right: 8px;
+            }
+
+            & .link {
+                color: #ED1C24;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+
+    & .contentContainer {
+        margin-top: 30px;
+
+        & .topImage {
+            margin-bottom: 8px;
+
+            & .label {
+                margin-top: 20px;
+                margin-bottom: 8px;
+                line-height: 120%;
+                font-size: 13px;
+                
+                & .lableText {
+                    color: #7C7C7C;
+                    font-weight: bold;
+                }
+
+                & .src {
+                    color: #ABABAB;
+                    margin-left: 3px
+                }
+            }
+        }
+
+        & .mainContentContainer {
+            position: relative;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            column-gap: 16px;
+            margin-top: 50px;
+
+            & .postContent {
+                min-height: 207px;
+                margin-left: 30px;
+            }
+
+            & .authorContainer {
+                align-self: flex-start;
+
+                position: sticky;
+                margin-top: 50px;
+                top: 60px;
+                
+                visibility: visible;
+            }
+        }
+    }
+
+}
