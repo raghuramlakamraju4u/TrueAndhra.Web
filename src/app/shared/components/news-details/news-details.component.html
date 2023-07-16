@@ -38,13 +38,15 @@
         </div>
 
         <div class="mainContentContainer clearfix">
-            
+
             <div class="authorContainer">
                 <div>Author info goes here ....</div>
             </div>
             <div class="postContent">
-                {{oPostDetails.oContent.text}}
+                <ngx-twitter-tweet [tweetID]="'1680164912683786242'" [options]="{ size: 'large', text: 'Tweet from Twitter' }"></ngx-twitter-tweet>
+                <div>{{oPostDetails.oContent.text}}</div>
             </div>
+            
         </div>
     </div>
 </div>
