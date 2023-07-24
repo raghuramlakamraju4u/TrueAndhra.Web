@@ -16,15 +16,24 @@
         </ngb-carousel>
         
     </div>
-    <div class="col-12 col-sm-4 mt-3 mt-sm-0" style="background-color: lightsalmon;">
-        <div class="row">
-            <div class="col-6">Btn 1</div>
-            <div class="col-6">Btn 2</div>
+    <div class="col-12 col-sm-4 mt-3 mt-sm-0">
+        <div class="row gx-4">
+            <div class="col-6 btn" [ngClass]="{'btn-danger' : bMostReadBtnClicked }" type="button"  (click)="fnMostReadClick()">Most Read</div>
+            <div class="col-6 btn" [ngClass]="{'btn-danger' : !bMostReadBtnClicked }" type="button"  (click)="fnCommentedClick()">Commented</div>
         </div>
 
         <div class="row mt-3">
             <div class="col-12">
-                List goes here ...
+                <div *ngIf="bMostReadBtnClicked else Commented">
+                    <div *ngFor="let oItem of arrMostRead">
+                        <app-post-item class="m-5" [oPostConfig]="oItem"></app-post-item>
+                    </div>
+                </div>
+                <ng-template #Commented>
+                    <div *ngFor="let oItem of arrCommented">
+                        <app-post-item class="m-5" [oPostConfig]="oItem"></app-post-item>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </div>

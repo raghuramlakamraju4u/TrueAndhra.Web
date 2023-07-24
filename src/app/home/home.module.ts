@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditorComponent } from './components/editor/editor.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule } from '@angular/common/http';
+import { UicommonModule } from '../uicommon/uicommon.module';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
 
     FormsModule,
     NgbCarouselModule,
-    NgFor
+    NgFor,
+    UicommonModule
   ],
   exports: [
     TopBarComponent,
