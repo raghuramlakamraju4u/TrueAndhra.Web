@@ -1,0 +1,32 @@
+
+.row-b-title{
+    border-left: 3px solid red;
+    height: 2.5rem;
+    background: #F0F0F0;
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Posts{
+    display: grid;
+    grid-auto-flow: column;
+    
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
