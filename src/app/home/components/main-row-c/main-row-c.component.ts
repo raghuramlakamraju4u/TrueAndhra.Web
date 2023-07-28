@@ -42,6 +42,22 @@ export class MainRowCComponent implements OnInit {
           'The world’s tiniest drone put to the test',
           'Our favorites from the Geneva Motor Show'
         ]
+      },
+      {
+        sImg: 'https://quanticalabs.com/wp_themes/pressroom/files/2015/01/image_02-100x100.jpg',
+        STitle: 'North Sea oil industry faces dire future',
+        sDesc: 'Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.',
+        sCat: 'LIFESTYLE',
+        oDate: new Date(),
+        nImgSize: 0,
+        bAlignHorizontal: true,
+        bShowBullets: false,
+        arrBullets: [
+          'Free episodes and new movies on iTunes',
+          'Getting started with mobile games',
+          'The world’s tiniest drone put to the test',
+          'Our favorites from the Geneva Motor Show'
+        ]
       }
     ]
   }
@@ -67,6 +83,22 @@ export class MainRowCComponent implements OnInit {
       },
       {
         sImg: 'https://quanticalabs.com/wp_themes/pressroom/files/2015/01/image_13-100x100.jpg',
+        STitle: 'North Sea oil industry faces dire future',
+        sDesc: 'Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.',
+        sCat: 'LIFESTYLE',
+        oDate: new Date(),
+        nImgSize: 0,
+        bAlignHorizontal: true,
+        bShowBullets: false,
+        arrBullets: [
+          'Free episodes and new movies on iTunes',
+          'Getting started with mobile games',
+          'The world’s tiniest drone put to the test',
+          'Our favorites from the Geneva Motor Show'
+        ]
+      },
+      {
+        sImg: 'https://quanticalabs.com/wp_themes/pressroom/files/2015/01/image_06-100x100.jpg',
         STitle: 'North Sea oil industry faces dire future',
         sDesc: 'Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.',
         sCat: 'LIFESTYLE',
@@ -118,12 +150,58 @@ export class MainRowCComponent implements OnInit {
           'The world’s tiniest drone put to the test',
           'Our favorites from the Geneva Motor Show'
         ]
+      },
+      {
+        sImg: 'https://quanticalabs.com/wp_themes/pressroom/files/2015/01/image_06-100x100.jpg',
+        STitle: 'North Sea oil industry faces dire future',
+        sDesc: 'Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.',
+        sCat: 'LIFESTYLE',
+        oDate: new Date(),
+        nImgSize: 0,
+        bAlignHorizontal: true,
+        bShowBullets: false,
+        arrBullets: [
+          'Free episodes and new movies on iTunes',
+          'Getting started with mobile games',
+          'The world’s tiniest drone put to the test',
+          'Our favorites from the Geneva Motor Show'
+        ]
       }
     ]
   }
+
+  public bIsMouseHoverA: boolean = false;
+  public bIsMouseHoverB: boolean = false;
+  public bIsMouseHoverC: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  //**** Need to find a better way***
+  onMouseOverA(){
+    this.bIsMouseHoverA = true;
+  }
+
+  onMouseOutA(){
+    this.bIsMouseHoverA = false;
+  }
+
+  onMouseOverB(){
+    this.bIsMouseHoverB = true;
+  }
+
+  onMouseOutB(){
+    this.bIsMouseHoverB = false;
+  }
+
+  onMouseOverC(){
+    this.bIsMouseHoverC = true;
+  }
+
+  onMouseOutC(){
+    this.bIsMouseHoverC = false;
   }
 
 }
