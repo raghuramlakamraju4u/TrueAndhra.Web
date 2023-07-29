@@ -1,4 +1,4 @@
-<div class="row" style="margin-top: 40px; height: 500px;">
+<div class="row" style="margin-top: 40px; height: 800px;">
     <div class="col-12 col-sm-4">
         <div class="row-c-title">
             {{oFirstColumn.sTitle}}
@@ -6,6 +6,10 @@
         <div class="Posts">
             <div *ngFor="let oItem of oFirstColumn.arrPosts">
                 <app-post-item class="m-5" [oPostConfig]="oItem"></app-post-item>
+            </div>
+
+            <div class="row g-1">
+                <div class="btn rounded-0 w-100 readMoreBtn" [ngClass]="[bIsMouseHoverA ? 'btn-danger': 'btn-light']" type="button" (mouseover)="onMouseOverA()" (mouseout)="onMouseOutA()">Read More</div>
             </div>
         </div>
     </div>
@@ -17,6 +21,11 @@
             <div *ngFor="let oItem of oSecondColumn.arrPosts">
                 <app-post-item class="m-5" [oPostConfig]="oItem"></app-post-item>
             </div>
+
+            <div class="row g-1">
+                <div class="btn rounded-0 w-100" [ngClass]="[bIsMouseHoverB ? 'btn-danger': 'btn-light']" type="button" (mouseover)="onMouseOverB()" (mouseout)="onMouseOutB()">Read More</div>
+            </div>
+
         </div>
     </div>
     <div class="col-12 col-sm-4">
@@ -26,6 +35,10 @@
         <div class="Posts">
             <div *ngFor="let oItem of oThirdColumn.arrPosts">
                 <app-post-item class="m-5" [oPostConfig]="oItem"></app-post-item>
+            </div>
+
+            <div class="row g-1">
+                <div class="btn rounded-0 w-100" [ngClass]="[bIsMouseHoverC ? 'btn-danger': 'btn-light']" type="button" (mouseover)="onMouseOverC()" (mouseout)="onMouseOutC()">Read More</div>
             </div>
         </div>
     </div>
